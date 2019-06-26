@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignemnt 2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="weight.css">
+    
+</head>
+<body>
+    
+    
+    <section class="header">
+    
+       <h1>Assignment 2</h1>
+        <p>Diving deep into JavaScript</p>
+        <hr>
+    </section>
+    
+        <section> 
+<!--    The converter-->
+        <h2>Weight Converter <i class="fas fa-weight-hanging"></i></h2>
+        <div class="convert">
+            <form>
+                <input placeholder="enter your value" type="number" oninput="weightConverter(this.value)">
+                
+                
+                <br>
+                <lable>
+                    your value is in:
+                </lable>
+                <br>
+                <br>
+                <select id="k">
+                    <option value="Kg">Kilogram</option>
+                    <option value="Pound">Pound</option>
+                </select>
+                
+                <p id="ans"><span id="outputKilograms"></span></p>
+            </form>
+            <a href="index.html"><i class="fas fa-arrow-alt-circle-left"></i>
+</a>
+            
+            <script>
+                function weightConverter(valNum) {
+                
+                if(document.getElementById("k").value == "Kg"){
+                    
+                        document.getElementById("outputKilograms").innerHTML="Pound: "+ valNum*2.2046;
+                    
+                   }else{
+                   
+
+                    document.getElementById("outputKilograms").innerHTML="Kilogram: " + valNum/2.2046;
+                   }
+                   }
+            </script>
+        </div>
+    
+    </section>
+    
+    
+    </body>
+</html>

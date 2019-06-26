@@ -1,0 +1,153 @@
+body{
+    background-color: #1a7777;
+    text-align: center;
+}
+
+.header{
+    text-align: center;
+    line-height: 5px;
+    padding-top: 25px;
+    color: azure;
+    text-shadow: 10px;
+    margin-left:10%;
+    margin-right:10%;
+}
+.header h1{
+    font-family: monospace;
+    font-size: 3.5vw;
+    letter-spacing: 10px;
+}
+
+.header p{
+    font-family: sans-serif;
+    font-size: 1vw;
+    letter-spacing: 8px;
+    color: crimson;
+}
+span{
+    font-style: italic;
+    font-size: 24px;
+}
+#quote{
+    background-color: ghostwhite;
+    border-style: solid;
+    border-width: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#blue{
+    background-color: skyblue;
+    font-family:cursive;
+    border-style: dotted;
+    border-width: 2px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px;
+}
+#purple{
+    background-color: plum;
+    font-family:monospace;
+    border-style: dotted;
+    border-width: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px;
+}
+#orange{
+    background-color: coral;
+    font-family:sans-serif;
+    border-style: double;
+    border-width: 3px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px;
+}
+
+#red{
+    background-color: darkred;
+    font-family:serif;
+    border-style: double;
+    border-width: 5px;
+    color: aliceblue;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 40px;
+    text-align: center;
+    padding: 15px;
+}
+
+
+#redB{
+    background-color: darkred;
+    color: azure;
+    
+}
+#blueB{
+    background-color: skyblue;
+    color: azure;
+}
+#purpleB{
+    background-color: plum;
+    color: azure;
+}
+#orangeB{
+    background-color: coral;
+    color: azure;
+}
+#buttonsBelowQuote{
+    margin:auto;
+    padding: 10px;
+}
+
+.mainButtons{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    font-size: 1vw;
+}
+
+/*button in general*/
+button{
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color:floralwhite;
+}
+
+.button1{   
+  background-color: darkred; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.3vw;
+  margin-bottom: 8px;
+    width: 30%;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color:black;
+    font-weight: bold;
+/*    font-size: 30px;*/
+    
+}
+i{
+    color: aliceblue;
+    font-size: 28px;
+    padding-top: 40px;
+}

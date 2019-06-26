@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignemnt 2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    
+    
+    <section class="header">
+    
+       <h1>Assignment 2</h1>
+        <p>Diving deep into JavaScript</p>
+        <hr>
+    </section>
+       
+    
+    
+    <section>
+        <div class="mainButtons">
+            <button class="button1"><a href="weight.html">Weight Converter</a></button><br>
+            <button class="button1"><a href="math.html">Math calculator</a></button><br>
+            <button class="button1"><a href="magic.html">Text Magic</a></button>
+            <br>
+            <a href="index.html"><i class="fas fa-arrow-alt-circle-left"></i>
+            </a>
+        </div>
+
+
+	<section> <!-- for the quote -->
+		<div id="quote">
+			<script type="text/javascript">
+				
+				var quote=["Create the highest, grandest vision possible for your life, because you become what you believe",
+                           
+                "When you can’t find the sunshine, be the sunshine", 
+                           
+                "The grass is greener where you water it", 
+                           
+                "So, what if, instead of thinking about solving your whole life, you just think about adding additional good things. One at a time. Just let your pile of good things grow"];
+				var x = Math.floor(Math.random()*4);
+				document.write("<h1> <span>The quote of the day is </span><br>" + quote[x] + "</h1>");
+				
+
+			</script>           
+		</div>
+
+            
+            <script>
+                var div=document.getElementById("quote");
+                
+                function blue(){
+                    div.setAttribute("id","blue");
+                }
+                function red(){
+                    div.setAttribute("id","red");
+                }
+                function purple(){
+                    div.setAttribute("id","purple");
+                }
+                function orange(){
+                    div.setAttribute("id","orange");
+                }
+            </script>
+        <div id="buttonsBelowQuote">
+            <button id="redB" onclick="red()">
+            make it red
+            </button>
+            <button id="blueB" onclick="blue()">
+            make it blue
+            </button>
+            <button id="purpleB" onclick="purple()">
+            make it purple
+            </button>
+            <button id="orangeB" onclick="orange()">
+            make it orange
+            </button>
+        </div>
+	</section>
+</body>
+</html>

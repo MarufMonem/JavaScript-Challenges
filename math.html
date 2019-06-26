@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignemnt 2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="math.css">
+    
+</head>
+<body>
+    
+    
+    <section class="header">
+    
+       <h1>Assignment 2</h1>
+        <p>Diving deep into JavaScript</p>
+        <hr>
+    </section>
+    
+        
+    <section>
+<!--    part 2 max min average finder-->
+        <h2>Math Coverter</h2>
+        <p class="sub">Easily find out minimum, maximum, sum, average and the reverse of the order given.</p>
+        
+        <lable>Your Series <i class="fas fa-arrow-down"></i></lable>
+        <br>
+        
+         <input placeholder="1,2,3,4,5" type="text" oninput="spilter(this.value)">
+        
+        <p>Max: <span id="max"></span></p>
+        <p>Min: <span id="min"></span></p>
+        <p>Sum: <span id="sum"></span></p>
+        <p>Average: <span id="average"></span></p>
+        <p>Reverse Order: <span id="reverse"></span></p>
+        
+        <a href="index.html"><i class="fas fa-arrow-alt-circle-left"></i></a>
+        <script>
+            function spilter(val){
+                var t_array = val.split(",");
+                var array=[];
+                
+//                coverting all string values to numbers and storing                      them in a new array
+                for(var i=0;i<t_array.length;i++){
+                    
+                    var val=t_array[i];
+                    array[i]=parseInt(val,10);
+                }
+                
+                var max=array[0];
+                var min =array[0];
+                var sum=0;
+                for(var i=0; i<array.length;i++){
+                    if(array[i]>max){
+                        max=array[i];
+                    }
+                    if(array[i]<min){
+                        min=array[i];
+                    }
+                    sum= sum+array[i];
+                }
+                
+                var average=sum/array.length;
+                
+                var revArray=[];
+                var k=0;
+                for(var i=array.length-1;i>=0;i--){
+                    
+                    revArray[k]=array[i];
+                    k++;
+                }
+                
+                document.getElementById("max").innerHTML=max;
+                document.getElementById("min").innerHTML=min;
+                document.getElementById("sum").innerHTML=sum;
+                document.getElementById("average").innerHTML=average;
+                document.getElementById("reverse").innerHTML=revArray;
+                
+                
+            }
+        </script>
+        
+        
+    </section>
+    
+        
+    
+    </body>
+</html>

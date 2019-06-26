@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignemnt 2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="magic.css">
+</head>
+<body>
+    
+    
+    <section class="header">
+    
+       <h1>Assignment 2</h1>
+        <p>Diving deep into JavaScript</p>
+        <hr>
+    </section>
+    
+    
+    <h1 class="title">Magical Text editor <i class="fas fa-pencil-alt"></i></h1>
+    <!--    Magic-->
+        
+        <br>
+    
+<!--    input from the user-->
+        <textarea id="user" placeholder="Type your text here" type="text"  value ="" oninput="this.value"></textarea>
+        <br>
+    
+<!--    clear button-->
+        <button onclick="document.getElementById('user').value = ''">Clear It</button>
+    
+<!--        capitalize all-->
+        <button onclick="caps(document.getElementById('user').value)">Capitalize</button>
+    
+    
+<!--        sort the whole text-->
+        <button onclick="sort(document.getElementById('user').value)">Sort</button>
+    
+    
+<!--        Reverse the text-->
+        <button onclick="rev(document.getElementById('user').value)">Reverse</button>
+    
+    
+<!--        strip away the line breaks-->
+        <button onclick="strip(document.getElementById('user').value)">Strip Blank</button>
+    
+    
+<!--    adds number to all the lines-->
+        <button onclick="number(document.getElementById('user').value)">Add Number</button>
+    
+    
+<!--    Random shuffle-->
+        <button onclick="shuffle(document.getElementById('user').value)">Shuffle</button>
+    
+    <br>
+    
+<!--    go back to homepage-->
+    <a href="index.html"><i class="fas fa-arrow-alt-circle-left"></i></a>
+        
+       
+<!--    main js-->
+    <script>
+            
+        function caps(val){
+                var p= val.toUpperCase();
+                document.getElementById('user').value=p;
+                
+            }
+        
+        function rev(user){
+             var splitString = user.split("");
+             var reverseArray = splitString.reverse(); 
+             var joinArray = reverseArray.join("");
+             document.getElementById('user').value = joinArray;
+        }
+            
+            function strip(user){
+//                replacing all type of next line
+             var splitString = user.replace(/(\r\n|\n|\r)/gm, " ");
+             document.getElementById('user').value = splitString;
+        }
+            
+            function shuffle(val){
+                var splitString = val.split("\n");
+//                console.log(splitString);
+                var newArray=[];
+                var len=splitString.length;
+                for(var i = 0; i<len; i++){
+                    newArray[i]=splitString[Math.floor(Math.random()*len)];
+                }
+                document.getElementById('user').value= newArray;
+            }
+            
+            function number(val){
+                var split = val.split("\n");
+                var newArray=[];
+                for(var i=0;i<split.length;i++){
+                    newArray[i]=(i+1)+ split[i];
+//                    console.log(newArray[i]);
+                }
+                document.getElementById('user').value= newArray;
+            }
+            
+            function sort(val){
+                 var split = val.split("\n");
+                split.sort();
+//                console.log(split);
+                document.getElementById('user').value= split;
+            }
+            
+        </script>
+    
+   </body>
+</html>
